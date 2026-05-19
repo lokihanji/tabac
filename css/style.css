@@ -531,10 +531,11 @@ footer {
     grid-template-columns: 1fr;
   }
   .project-card {
-    min-width: 100%;
+    min-width: 85%;
   }
-  .prev-btn { left: 8px; }
-  .next-btn { right: 8px; }
+  .carousel-btn {
+    display: none;
+  }
   .nav-links {
     display: none;
   }
