@@ -170,7 +170,10 @@
           <!-- <p>Here are sample projects you can replace with your actual work.</p> -->
         </div>
 
-        <div class="projects">
+        <div class="projects-carousel-wrapper">
+          <button class="carousel-btn prev-btn" aria-label="Previous Project" onclick="scrollProjects(-1)">❮</button>
+          <button class="carousel-btn next-btn" aria-label="Next Project" onclick="scrollProjects(1)">❯</button>
+          <div class="projects" id="projectsCarousel">
           <div class="project-card">
             <div
               style="height: 230px; position: relative; overflow: hidden; background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(167, 139, 250, 0.15)); border-bottom: 1px solid var(--card-border);">
@@ -284,6 +287,7 @@
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

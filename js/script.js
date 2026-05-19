@@ -37,3 +37,9 @@ window.addEventListener('scroll', function () {
     backToTopBtn.style.pointerEvents = 'none';
   }
 });
+
+function scrollProjects(direction) {
+  const carousel = document.getElementById('projectsCarousel');
+  const scrollAmount = carousel.clientWidth;
+  carousel.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+}
