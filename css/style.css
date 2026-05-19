@@ -531,7 +531,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .project-card {
-    min-width: 100%;
+    min-width: calc(100% - 48px);
   }
   .prev-btn { left: -10px; }
   .next-btn { right: -10px; }
