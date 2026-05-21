@@ -229,6 +229,7 @@ nav {
 
 section {
   padding: 92px 0;
+  scroll-margin-top: 85px;
 }
 
 .section-header {
@@ -581,4 +582,126 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* CV Section Styles */
+.cv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cv-card {
+  border: 1px solid var(--card-border);
+  background: var(--card);
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.cv-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.cv-timeline-item {
+  position: relative;
+  padding-left: 28px;
+  border-left: 2px solid var(--card-border);
+}
+
+.cv-timeline-dot {
+  position: absolute;
+  left: -6px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--primary);
+  transition: transform 0.25s ease;
+}
+
+.cv-timeline-item:hover .cv-timeline-dot {
+  transform: scale(1.4);
+  background: var(--secondary);
+  box-shadow: 0 0 10px var(--secondary);
+}
+
+.cv-timeline-date {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.cv-timeline-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.cv-timeline-org {
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.cv-timeline-desc {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cv-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  text-align: center;
+}
+
+.cv-stat-item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--card-border);
+  padding: 16px 8px;
+  border-radius: 18px;
+}
+
+.cv-stat-val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cv-stat-lbl {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .cv-grid {
+    grid-template-columns: 1fr;
+  }
 }
