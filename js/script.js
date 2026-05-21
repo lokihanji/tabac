@@ -6,7 +6,7 @@ async function sendEmail(event) {
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
 
-  if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "YOURE_ACCES_KEY") {
+  if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "b89c42a2-3075-4246-b872-633c553e86dc") {
     showNotification('Set your Web3Forms access key in js/script.js', true);
     console.warn('To receive emails, please get a free access key at https://web3forms.com/ and paste it into js/script.js.');
     return;
