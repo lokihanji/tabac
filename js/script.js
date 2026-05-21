@@ -1,12 +1,20 @@
 // Get your free Access Key at https://web3forms.com/
+// <<<<<<< HEAD
 const WEB3FORMS_ACCESS_KEY = "e8f9002e-1f5b-4094-b5aa-bfe28a4f7434";
+// =======
+// const WEB3FORMS_ACCESS_KEY = "b89c42a2-3075-4246-b872-633c553e86dc";
+// >>>>>>> d01af4bf80014a2588a0f2d84d098430369837b8
 
 async function sendEmail(event) {
   event.preventDefault();
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
 
+  // <<<<<<< HEAD
   if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+    // =======
+    //   if (!WEB3FORMS_ACCESS_KEY || WEB3FORMS_ACCESS_KEY === "b89c42a2-3075-4246-b872-633c553e86dc") {
+    // >>>>>>> d01af4bf80014a2588a0f2d84d098430369837b8
     showNotification('Set your Web3Forms access key in js/script.js', true);
     console.warn('To receive emails, please get a free access key at https://web3forms.com/ and paste it into js/script.js.');
     return;
